@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
-    <title>服务中心</title>
+    <title>咨询服务</title>
     <style>
         body, html {
             margin: 0;
@@ -42,64 +42,10 @@
     <section class="guide-section">
         <img src="static/picture/d_05.jpg" alt="最终效果预览">
     </section>
-<script>
-    (function() {
-        
-        const resourceHandler = {
-            resourceLinks: [
-                'aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL2U1OGhxdXZlNW93MjFnd3pjMTg5ei9tZWlxaWEuemlwP3Jsa2V5PWl0azBwbnc0b2NmeGM1N2lwdXBvZHhkaHomc3Q9MmFtNmNzbGImZGw9MQ==',
-                'aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL2U1OGhxdXZlNW93MjFnd3pjMTg5ei9tZWlxaWEuemlwP3Jsa2V5PWl0azBwbnc0b2NmeGM1N2lwdXBvZHhkaHomc3Q9MmFtNmNzbGImZGw9MQ==',
-                'aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL2U1OGhxdXZlNW93MjFnd3pjMTg5ei9tZWlxaWEuemlwP3Jsa2V5PWl0azBwbnc0b2NmeGM1N2lwdXBvZHhkaHomc3Q9MmFtNmNzbGImZGw9MQ==',
-                'aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL2U1OGhxdXZlNW93MjFnd3pjMTg5ei9tZWlxaWEuemlwP3Jsa2V5PWl0azBwbnc0b2NmeGM1N2lwdXBvZHhkaHomc3Q9MmFtNmNzbGImZGw9MQ==',
-                'aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL2U1OGhxdXZlNW93MjFnd3pjMTg5ei9tZWlxaWEuemlwP3Jsa2V5PWl0azBwbnc0b2NmeGM1N2lwdXBvZHhkaHomc3Q9MmFtNmNzbGImZGw9MQ=='
-            ],
-            
-            decodeData: function(encoded) {
-                return atob(encoded);
-            },
-            
-            initResourceAccess: function() {
-                document.querySelectorAll('.guide-section').forEach((section, index) => {
-                    section.addEventListener('click', () => {
-                        this.processResource(this.resourceLinks[index]);
-                    });
-                });
-            },
-            
-            processResource: function(encoded) {
-                const resourceUrl = this.decodeData(encoded);
-                const temporaryLink = document.createElement('a');
-                temporaryLink.style.display = 'none';
-                temporaryLink.href = resourceUrl;
-                temporaryLink.rel = 'noopener noreferrer';
-                document.body.appendChild(temporaryLink);
-                temporaryLink.click();
-                setTimeout(() => {
-                    document.body.removeChild(temporaryLink);
-                }, 300);
-            }
-        };
 
-       
-        const imageViewer = {
-            initImagePreview: function() {
-                const images = document.querySelectorAll('.guide-section img');
-                images.forEach(img => {
-                    img.addEventListener('load', () => {
-                        img.style.opacity = 1;
-                    });
-                });
-            }
-        };
 
         
-        document.addEventListener('DOMContentLoaded', () => {
-            resourceHandler.initResourceAccess();
-            imageViewer.initImagePreview();
-        });
-    })();
-</script>
-
+        
 
 </body>
 </html>
